@@ -12,9 +12,10 @@ type Message = {
 interface CoPilotWidgetProps {
   onUpdateStockPriceDays?: (days: number) => void;
   onShowDividendAnalysis?: () => Promise<void>;
+  onShowCEOCommentary?: () => void;
 }
 
-export const CoPilotWidget = ({ onUpdateStockPriceDays, onShowDividendAnalysis }: CoPilotWidgetProps) => {
+export const CoPilotWidget = ({ onUpdateStockPriceDays, onShowDividendAnalysis, onShowCEOCommentary }: CoPilotWidgetProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDocked, setIsDocked] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -26,8 +27,10 @@ export const CoPilotWidget = ({ onUpdateStockPriceDays, onShowDividendAnalysis }
   const [isTyping, setIsTyping] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [isLoadingChart, setIsLoadingChart] = useState(false);
+  const [isCEOLoading, setIsCEOLoading] = useState(false);
 
   const handleSendMessage = async (text: string) => {
+    (window as any).lastQuery = text;
     setMessages(prev => [...prev, { type: 'user', content: text }]);
     setInputValue('');
     setIsTyping(true);
@@ -54,6 +57,16 @@ export const CoPilotWidget = ({ onUpdateStockPriceDays, onShowDividendAnalysis }
       } catch (error) {
         console.error('Error showing dividend analysis:', error);
       }
+    } else if (text.toLowerCase().includes('ceo commentary') || text.toLowerCase().includes('q3 2024')) {
+      setIsCEOLoading(true);
+      onShowCEOCommentary?.();
+      setMessages(prev => [...prev, { 
+        type: 'bot', 
+        content: "I've displayed the CEO's commentary for Q3 2024 below." 
+      }]);
+      setTimeout(() => {
+        setIsCEOLoading(false);
+      }, 3000);
     } else {
       await new Promise(resolve => setTimeout(resolve, 1500));
       setMessages(prev => [...prev, { 
@@ -117,7 +130,7 @@ export const CoPilotWidget = ({ onUpdateStockPriceDays, onShowDividendAnalysis }
                   </div>
                 </div>
               )}
-              <SuggestedQueries onQuerySelect={handleSendMessage} />
+              <SuggestedQueries onQuerySelect={handleSendMessage} isLoading={isCEOLoading} />
             </div>
             <div className="mt-4 flex items-center gap-2">
               <input
