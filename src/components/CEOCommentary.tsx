@@ -28,7 +28,7 @@ export const CEOCommentary = ({ commentary, onClose }: CEOCommentaryProps) => {
   };
 
   return (
-    <div className={`space-y-4 transition-opacity duration-300 ${isClosing ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`space-y-4 transition-opacity duration-300 manrope-400 ${isClosing ? 'opacity-0' : 'opacity-100'}`}>
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold">JPMC CEO Commentary</h2>
         <button

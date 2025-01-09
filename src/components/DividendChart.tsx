@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from "react";
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryTooltip, VictoryVoronoiContainer } from 'victory';
 
 const annualData = [
@@ -18,6 +18,12 @@ const quarterlyData = [
 
 export const DividendChart = () => {
   const [showAnnual, setShowAnnual] = useState(true);
+  const [boundingRect, setBoundingRect] = useState({ width: 0, height: 0 });
+  const graphRef = useCallback((node) => {
+    if (node !== null) {
+      setBoundingRect(node.getBoundingClientRect());
+    }
+  }, []);
 
   return (
     <div className="space-y-4">
@@ -47,10 +53,10 @@ export const DividendChart = () => {
         </div>
       </div>
       
-      <div className="h-[300px]">
+      <div className="h-[300px]" ref={graphRef}>
         <VictoryChart
           height={300}
-          width={undefined}
+        	width={boundingRect.width - 80}
           padding={{ top: 20, bottom: 40, left: 50, right: 30 }}
           domainPadding={{ x: 25 }}
           containerComponent={
