@@ -17,8 +17,7 @@ const Index = () => {
             Interactive <br /> Economic Analysis Tool
           </Title>
           <Paragraph style={{ color: "rgba(255, 255, 255, 0.65)", fontSize: "18px" }} className="manrope-400">
-            A self-improving analysis layer for LLM applications, <br />
-            enabling personalized AI experiences that save costs and delight users.
+						Insight to Action: AI-Powered Economic Research and Advisory
           </Paragraph>
         </div>
 

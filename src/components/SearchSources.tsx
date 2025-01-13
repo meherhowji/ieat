@@ -31,14 +31,16 @@ export const SearchSources = ({ sources }: SearchSourcesProps) => {
                     {/* <span>{source.source}</span> */}
                   </div>
                 </div>
-                <a
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80"
-                >
-                  <ExternalLink className="w-5 h-5" />
-                </a>
+                {source.url && (
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                )}
               </div>
             </CardContent>
           </Card>

@@ -111,21 +111,27 @@ const SearchResults = () => {
   // Mock sources data - in a real app, this would come from your API
   const sources = [
     {
-      title: "Apple agrees to pay $95 million to settle lawsuit",
-      url: "https://example.com/article1",
-      source: "timesofindia.indiatimes.com",
+      title: "JPMC Press Release",
+      url: "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/66269bb6-ecc5-4172-b461-6b7e7cd47aab.pdf",
+      source: "3Q24",
       icon: "/path-to-icon.png",
     },
     {
-      title: "Apple to pay $95 million in Siri privacy settlement",
-      url: "https://example.com/article2",
-      source: "apnews.com",
+      title: "JPMC Earnings Supplement",
+      url: "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/6bca0e4a-703c-4fff-8e70-f026f015fee5.pdf",
+      source: "3Q24",
       icon: "/path-to-icon.png",
     },
     {
-      title: "Is Siri secretly listening to you?",
-      url: "https://example.com/article3",
-      source: "indianexpress.com",
+      title: "Barclays Press Release",
+      url: "",
+      source: "KB",
+      icon: "/path-to-icon.png",
+    },
+    {
+      title: "Barclays Earning Supplement",
+      url: "",
+      source: "KB",
       icon: "/path-to-icon.png",
     },
   ];
@@ -182,65 +188,39 @@ const SearchResults = () => {
                     </div>
                   ) : (
                     <div className="prose prose-invert max-w-none" id="answer">
-                      <h2>Apple Settles Siri Privacy Lawsuit for $95 Million</h2>
+                      <h2>Strategic Growth and Resilience: Insights from Bank of America and JPMorgan Chase</h2>
                       <p className="text-secondary">
-                        In a significant development for privacy advocates and consumers alike, Apple has agreed to
-                        settle a class-action lawsuit for $95 million. The lawsuit alleged that Apple had been recording
-                        conversations through its Siri voice assistant without the consent of its users, a claim that
-                        raised serious privacy concerns and questioned the ethical implications of such actions by major
-                        tech companies.
+                        From the commentary provided by the CEOs of Bank of America and JPMorgan Chase, it is evident
+                        that both banks have demonstrated strong financial performance and strategic growth in key
+                        areas. Bank of America has experienced a robust quarter, driven by its strong Consumer Banking
+                        business and complemented by growth in its Global Markets, Global Banking, and Wealth Management
+                        divisions. The Global Markets business has achieved its ninth consecutive quarter of
+                        year-over-year revenue growth in sales and trading, delivering double-digit returns. This
+                        indicates a consistent and strategic focus on expanding market share and enhancing profitability
+                        in key banking sectors. The investments made by Bank of America in these areas are yielding
+                        positive results for shareholders, showcasing the bank's ability to leverage its resources
+                        effectively to drive growth and deliver value.
                       </p>
 
-                      <h3>Overview of the Lawsuit</h3>
                       <p className="text-secondary">
-                        The settlement comes after claims surfaced that Apple's Siri, the popular voice-activated
-                        assistant found in a range of Apple devices, was recording and analyzing user conversations
-                        without explicit permission. This practice, purportedly aimed at improving the service's
-                        accuracy and responsiveness, was deemed a breach of user privacy, sparking widespread critique
-                        and leading to legal action.
+                        JPMorgan Chase, on the other hand, reported a net income of $13.4 billion in the first quarter,
+                        with a high CET1 capital ratio of 15.0%, providing flexibility to reinvest for growth while
+                        maintaining a robust capital-return profile. Despite a 4% sequential decline in Net Interest
+                        Income, the bank's lines of business demonstrated strong underlying performance. The Consumer &
+                        Community Banking division saw a 25% increase in client investment assets, while the Corporate &
+                        Investment Bank experienced a 21% rise in Investment Banking fees. The Commercial Banking
+                        division reported strong growth in Payments fees, and the Asset & Wealth Management division saw
+                        a 14% increase in asset management fees with continued strong net inflows.
                       </p>
 
-                      <h3>Key Details of the Settlement</h3>
                       <p className="text-secondary">
-                        The lawsuit covers any Siri-enabled device owned between September 17, 2014, and December 31,
-                        2024. This broad timeframe includes millions of devices worldwide, from iPhones and iPads to
-                        Macs and Apple Watches, all equipped with Siri capabilities. The settlement aims to compensate
-                        users for the perceived intrusion into their personal conversations and the potential misuse of
-                        their private data.
+                        Both banks are navigating economic uncertainties, including geopolitical tensions, persistent
+                        inflationary pressures, and the effects of quantitative tightening, with a focus on supporting
+                        their clients and delivering shareholder value. The insights from the CEOs' commentaries
+                        highlight the banks' commitment to growth, profitability, and their roles in supporting the
+                        broader economy
                       </p>
 
-                      <h3>Compensation for Affected Users</h3>
-                      <p className="text-secondary">
-                        Under the terms of the settlement, affected users are entitled to compensation, which could
-                        amount to up to $20 per device. This compensation is applicable for a maximum of five devices
-                        per claimant, allowing individuals who own multiple Apple products to claim a more significant
-                        sum. The process for claiming this compensation will likely be outlined on a dedicated
-                        settlement website where users can submit claims and learn more about their eligibility and the
-                        necessary steps to take.
-                      </p>
-
-                      <h3>Broader Implications</h3>
-                      <p className="text-secondary">
-                        This settlement is a reminder of the ongoing challenges and responsibilities that technology
-                        companies face regarding user privacy. It underscores the need for stringent privacy protections
-                        and the importance of securing user consent for data collection practices, especially as
-                        voice-activated technologies become increasingly integrated into everyday devices.
-                      </p>
-                      <p className="text-secondary">
-                        The resolution of this lawsuit might prompt other companies to reevaluate their data collection
-                        methodologies to avoid similar legal challenges. Furthermore, it sets a precedent that could
-                        influence future legislation and regulation in the tech industry, particularly concerning how
-                        companies handle voice data and user interactions with intelligent assistants.
-                      </p>
-
-                      <h3>Conclusion</h3>
-                      <p className="text-secondary">
-                        For Apple, this settlement represents both a closure of the contentious issue and a significant
-                        financial outlay. For the tech industry at large, it serves as a cautionary tale about the
-                        balance between enhancing technological capabilities and respecting user privacy. Users affected
-                        by this issue are encouraged to stay informed about the settlement and claim procedures to
-                        ensure they receive the compensation they are owed.
-                      </p>
                       <IconContainer />
                     </div>
                   )}

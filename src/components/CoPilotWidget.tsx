@@ -35,7 +35,7 @@ export const CoPilotWidget = ({ onUpdateStockPriceDays, onShowDividendAnalysis, 
     setInputValue('');
     setIsTyping(true);
     
-    if (text.toLowerCase().includes('last 60 days stock price')) {
+    if (text.toLowerCase().includes('60 days')) {
       setIsLoadingChart(true);
       await new Promise(resolve => setTimeout(resolve, 1500));
       await onUpdateStockPriceDays?.(60);
@@ -44,10 +44,10 @@ export const CoPilotWidget = ({ onUpdateStockPriceDays, onShowDividendAnalysis, 
         type: 'bot', 
         content: "I've updated the stock price chart to show data for the last 60 days." 
       }]);
-    } else if (text.toLowerCase().includes('summarize market events')) {
+    } else if (text.toLowerCase().includes('market events')) {
       await new Promise(resolve => setTimeout(resolve, 1500));
       setMessages(prev => [...prev, { type: 'bot', content: generateMarketSummary() }]);
-    } else if (text.toLowerCase().includes('analyze') && text.toLowerCase().includes('dividend')) {
+    } else if (text.toLowerCase().includes('analyze') || text.toLowerCase().includes('dividend')) {
       try {
         await onShowDividendAnalysis?.();
         setMessages(prev => [...prev, { 
