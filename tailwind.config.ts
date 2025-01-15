@@ -1,12 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -38,17 +33,17 @@ export default {
         accent: {
           DEFAULT: "#f3f4f6",
           foreground: "#0f172a",
-        }
+        },
       },
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: 'none',
-            color: 'inherit',
+            maxWidth: "none",
+            color: "inherit",
             a: {
-              color: '#9b87f5',
-              '&:hover': {
-                color: '#8670f4',
+              color: "#9b87f5",
+              "&:hover": {
+                color: "#8670f4",
               },
             },
           },
@@ -71,6 +66,27 @@ export default {
         "scale-in": {
           "0%": { transform: "scale(0.95)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        "border-walk": {
+          "0%": {
+            clipPath: "inset(0 0 98% 0)",
+          },
+
+          "25%": {
+            clipPath: "inset(0 0 0 98%)",
+          },
+
+          "50%": {
+            clipPath: "inset(98% 0 0 0)",
+          },
+
+          "75%": {
+            clipPath: "inset(0 98% 0 0)",
+          },
+
+          "100%": {
+            clipPath: "inset(0 0 98% 0)",
+          },
         },
       },
       animation: {
