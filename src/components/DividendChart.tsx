@@ -27,9 +27,8 @@ export const DividendChart = () => {
 
   return (
     <div className="space-y-4">
-      <div className="flex justify-between items-center">
-        <h3 className="text-xl font-semibold text-white">JPMC Dividend History</h3>
-        <div className="flex gap-2">
+      <div className="flex justify-end items-center">
+        <div className="flex gap-2 ">
           <button
             onClick={() => setShowAnnual(true)}
             className={`px-3 py-1 rounded text-sm ${
