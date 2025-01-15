@@ -28,7 +28,7 @@ export const SearchSources = ({ sources }: SearchSourcesProps) => {
                   <h3 className="text-white font-medium line-clamp-2 mb-2">{source.title}</h3>
                   <div className="flex items-center gap-2 text-secondary text-sm">
                     {source.icon && <img src={source.icon} alt={source.source} className="w-4 h-4" />}
-                    {/* <span>{source.source}</span> */}
+                    <span>{source.source}</span>
                   </div>
                 </div>
                 {source.url && (

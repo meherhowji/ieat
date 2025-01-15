@@ -114,25 +114,21 @@ const SearchResults = () => {
       title: "JPMC Press Release",
       url: "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/66269bb6-ecc5-4172-b461-6b7e7cd47aab.pdf",
       source: "3Q24",
-      icon: "/path-to-icon.png",
     },
     {
       title: "JPMC Earnings Supplement",
       url: "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/6bca0e4a-703c-4fff-8e70-f026f015fee5.pdf",
       source: "3Q24",
-      icon: "/path-to-icon.png",
     },
     {
       title: "Barclays Press Release",
       url: "",
       source: "KB",
-      icon: "/path-to-icon.png",
     },
     {
       title: "Barclays Earning Supplement",
       url: "",
       source: "KB",
-      icon: "/path-to-icon.png",
     },
   ];
 
