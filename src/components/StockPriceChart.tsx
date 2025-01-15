@@ -63,7 +63,7 @@ export const StockPriceChart = ({ days = 30, isLoading = false }: StockPriceChar
   }
 
   return (
-    <div className="w-full h-[300px] " ref={graphRef}>
+    <div className="w-full h-[300px]" ref={graphRef}>
       <VictoryChart
         width={boundingRect.width - 80}
         padding={{ top: 40, bottom: 50 }}

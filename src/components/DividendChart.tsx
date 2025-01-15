@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTooltip, VictoryVoronoiContainer } from 'victory';
+import { VictoryLine, VictoryChart, VictoryAxis, VictoryTooltip, VictoryVoronoiContainer } from 'victory';
 
 const annualData = [
   { year: '2020', dividend: 3.60 },
@@ -10,10 +10,10 @@ const annualData = [
 ];
 
 const quarterlyData = [
-  { quarter: 'Q1 2024', dividend: 1.25 },
-  { quarter: 'Q2 2024', dividend: 1.25 },
-  { quarter: 'Q3 2024', dividend: 1.25 },
-  { quarter: 'Q4 2024', dividend: 1.25 },
+  { quarter: 'Q1\'24', dividend: 1.20 },
+  { quarter: 'Q2\'24', dividend: 1.25 },
+  { quarter: 'Q3\'24', dividend: 1.36 },
+  { quarter: 'Q4\'24', dividend: 1.48 },
 ];
 
 export const DividendChart = () => {
@@ -56,13 +56,13 @@ export const DividendChart = () => {
       <div className="h-[300px]" ref={graphRef}>
         <VictoryChart
           height={300}
-        	width={boundingRect.width - 80}
-          padding={{ top: 20, bottom: 40, left: 50, right: 30 }}
+        	width={boundingRect.width}
+          padding={{ top: 20, bottom: 40, left: 40, right: 40 }}
           domainPadding={{ x: 25 }}
           containerComponent={
             <VictoryVoronoiContainer
               labels={({ datum }) => 
-                `${showAnnual ? datum.year : datum.quarter}: $${datum.dividend}`
+                `${showAnnual ? datum.year : datum.quarter} : $${datum.dividend}`
               }
               labelComponent={
                 <VictoryTooltip
@@ -102,21 +102,20 @@ export const DividendChart = () => {
               }
             }}
           />
-          <VictoryBar
+          <VictoryLine
             data={showAnnual ? annualData : quarterlyData}
             x={showAnnual ? "year" : "quarter"}
             y="dividend"
             style={{
               data: { 
-                fill: '#9b87f5',
-                width: 25
+                stroke: '#9b87f5',
+                strokeWidth: 2
               }
             }}
             animate={{
               duration: 500,
               onLoad: { duration: 500 }
             }}
-            cornerRadius={{ top: 4 }}
           />
         </VictoryChart>
       </div>
