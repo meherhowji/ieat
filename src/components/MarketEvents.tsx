@@ -4,23 +4,23 @@ import { Skeleton } from "./ui/skeleton";
 
 const dummyEvents = [
   {
-    date: "2024-02-15",
-    event: "JPMC announces new digital banking initiative",
+    date: "Jan 16 '25",
+    event: "JPMorgan Chase Return on Tangible Common Equity Sustainable in Medium Term, UBS Says",
     impact: "Positive"
   },
   {
-    date: "2024-02-10",
-    event: "Quarterly earnings exceed market expectations",
+    date: "Jan 15 ’25",
+    event: "JPMorgan, Citi, Wells, Goldman Crush Q4 Earnings",
     impact: "Positive"
   },
   {
-    date: "2024-02-05",
-    event: "New partnership with tech giant announced",
+    date: "Jan 15 ’25",
+    event: "JPMorganChase Declares Preferred Stock Dividends",
     impact: "Positive"
   },
   {
-    date: "2024-01-25",
-    event: "Expansion into emerging markets",
+    date: "Jan 15 ’25",
+    event: "JPMorganChase Reports Fourth-Quarter and Full-Year 2024 Financial Results",
     impact: "Neutral"
   }
 ];

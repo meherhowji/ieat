@@ -41,7 +41,7 @@ export const CEOCommentary = ({ commentary, onClose }: CEOCommentaryProps) => {
   };
 
   return (
-    <div className={`space-y-4 transition-opacity duration-300 ${isClosing ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`space-y-4 transition-opacity duration-300 pt-10 ${isClosing ? 'opacity-0' : 'opacity-100'}`}>
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold">JPMC CEO Commentary</h2>
         <div className="flex items-center gap-2">
@@ -89,7 +89,7 @@ export const CEOCommentary = ({ commentary, onClose }: CEOCommentaryProps) => {
             </div>
           ) : (
             editedCommentary.map((paragraph, index) => (
-              <p key={index} className="my-2">{paragraph}</p>
+              <p key={index} className="manrope-400">{paragraph}</p>
             ))
           )}
         </div>

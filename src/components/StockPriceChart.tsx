@@ -11,6 +11,9 @@ interface StockPriceChartProps {
 
 export const StockPriceChart = ({ days = 30, isLoading = false }: StockPriceChartProps) => {
   const data = [
+    { x: "Jan 17 '25", y: 255.12 },
+    { x: "Jan 16 '25", y: 254.27 },
+    { x: "Jan 15 '25", y: 252.35 },
     { x: "Jan 14 '25", y: 247.47 },
     { x: "Jan 13 '25", y: 244.21 },
     { x: "Jan 10 '25", y: 239.87 },
