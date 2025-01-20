@@ -21,7 +21,7 @@ const dummyEvents = [
   {
     date: "Jan 15 ’25",
     event: "JPMorganChase Reports Fourth-Quarter and Full-Year 2024 Financial Results",
-    impact: "Neutral"
+    impact: "Positive"
   }
 ];
 
